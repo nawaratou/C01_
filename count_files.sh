@@ -1,8 +1,3 @@
 #!/bin/bash
 
-repertoire="$(ls | wc -l)"
-
-read myfolder
-if [ "$repertoire" ]; then
-    echo "Le dossier "$myfolder" contient "$repertoire" fichier(s)."
-    else
+echo "Le dossier $1 contient $(ls $1 | wc -l) fichier(s)."
