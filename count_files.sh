@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# On fixe ici le nom du dossier à vérifier
-dossier="C01"
+read -p "Nom du dossier : " dossier
 
-# On compte le nombre de fichiers (pas de sous-dossiers) dans ce dossier
-ls "$dossier" | wc -l
+if [ -d "$dossier" ]; then
+    ls "$dossier" | wc -l
+else
+    ls "$dossier" 2>/dev/null | wc -l
+fi
