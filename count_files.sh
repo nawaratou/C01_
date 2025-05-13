@@ -3,7 +3,6 @@
 repertoire="$(ls | wc -l)"
 
 read myfolder
-if [ "$repertoire" -gt 0 ]; then
+if [ "$repertoire" ]; then
     echo "Le dossier "$myfolder" contient "$repertoire" fichier(s)."
-fi
-
+    else

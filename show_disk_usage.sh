@@ -1,10 +1,12 @@
 #!/bin/bash
-#Affiche a l'utilisation du disque
-disk_usage=$(df -h)
-#vérifie si la commande a réussi
-if [ $? -eq 0 ]; then
-echo "l'utilisation du diske est :"
-echo "disk_usage"
+
+if [ -d "$1" ]; then
+  echo "Utilisation du disque pour le système :"
+  df -h
+
+  echo ""
+  echo "Taille du dossier $1 :"
+  du -sh "$1"
 else
-echo "erreur lors de la récupération de l'utilisation du disque"
+  echo "Veuillez entrer un dossier valide."
 fi
