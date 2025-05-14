@@ -1,14 +1,11 @@
 #!/bin/bash
 
-# Affiche le nom du fichier (premier argument)
-echo "$1"
-
-# Affiche la chaîne recherchée (deuxième argument)
-echo "$2"
+read -p "Entrer le nom du fichier : " f
+read -p "Entrer la chaine à chercher : " s
 
 # Recherche la chaîne dans le fichier
-if grep -q "$2" "$1"; then
-    echo "La chaîne '$2' a été trouvée dans $1."
+if grep -q "$s" "$f"; then
+    echo "La chaîne '$s' a été trouvée dans $f."
 else
-    echo "La chaîne '$2' n'a pas été trouvée dans $1."
+    echo "La chaîne '$s' n'a pas été trouvée dans $f."
 fi
