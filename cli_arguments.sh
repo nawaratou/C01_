@@ -1,3 +1,6 @@
 #!/bin/bash
-echo "Argument 1: $1"
-echo "Argument 2: $2"
+# vérifier si le nombre d'arguments est correct
+echo "nombre d'arguments : $@"
+echo "Arguments 1: $1"
+shift
+echo "Arguments 2: $1"
