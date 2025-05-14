@@ -1,9 +1,10 @@
 #!/bin/bash
-# vérifier si le nombre d'arguments est correct
 
-i=1
-# afficher le nombre d'arguments
+# Compteur pour numéroter les arguments
+compteur=1
+
+# Parcourir tous les arguments avec $@
 for arg in "$@"; do
-    echo "Arguments $i : $arg"
-    ((i++))
-done 
+    echo "Argument $compteur : $arg"
+    ((compteur++))
+done
