@@ -5,7 +5,7 @@ read fichier
 echo "Entrez le mot à chercher :"
 read mot
 
-if grep -q "$mot" "$fichier"; then
+if grep -q "; then
     echo "Le mot '$mot' est dans $fichier."
 else
     echo "Le mot '$mot' n'est pas dans $fichier."
