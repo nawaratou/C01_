@@ -1,18 +1,19 @@
 #!/bin/bash
 
-echo "Entrez le premier nombre :"
-read num1
-echo "Entrez le deuxième nombre :"
-read num2
-echo "Entrez l'opération (+, -, *, /) :"
-read op
+a=$1
+b=$2
+op=$3
 
-case $op in
-    "+") result=$((num1 + num2)) ;;
-    "-") result=$((num1 - num2)) ;;
-    "*") result=$((num1 * num2)) ;;
-    "/") result=$((num1 / num2)) ;;
-    *) echo "Opération invalide" && exit 1 ;;
-esac
+read a b op
 
-echo "Résultat : $result"
+if [ "$op" = "+" ]; then
+    Resultat=$(($a + $b))
+elif [ "$op" = "-" ]; then
+    Resultat=$(($a - $b))
+elif [ "$op" = "*" ]; then
+    Resultat=$(($a * $b))
+elif [ "$op" = "/" ]; then
+    Resultat=$(($a / $b))
+fi
+echo "Résultat : $Resultat"
+exit 0
