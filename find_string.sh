@@ -1,12 +1,14 @@
 #!/bin/bash
 
-echo "Entrez le nom du fichier :"
-read fichier
-echo "Entrez le mot à chercher :"
-read mot
+# Affiche le nom du fichier (premier argument)
+echo "$1"
 
-if grep -q "; then
-    echo "Le mot '$mot' est dans $fichier."
+# Affiche la chaîne recherchée (deuxième argument)
+echo "$2"
+
+# Recherche la chaîne dans le fichier
+if grep -q "$2" "$1"; then
+    echo "La chaîne '$2' a été trouvée dans $1."
 else
-    echo "Le mot '$mot' n'est pas dans $fichier."
+    echo "La chaîne '$2' n'a pas été trouvée dans $1."
 fi
