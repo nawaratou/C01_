@@ -3,6 +3,6 @@
 read -a args
 i=1
 for arg in "${args[@]}"; do
-    echo "Arguments $i:$arg"
+    echo "Arguments $i : $arg"
     ((i++))
 done 
